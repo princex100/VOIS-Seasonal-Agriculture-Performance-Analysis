@@ -1,0 +1,97 @@
+{
+    "yield_anova": {
+        "F_stat": 1.4579031041437143,
+        "p_value": 0.23284748898871052
+    },
+    "yield_kruskal": {
+        "H_stat": 70.26461453711123,
+        "p_value": 5.523734764890478e-16
+    },
+    "profit_anova": {
+        "F_stat": 34.40108108402827,
+        "p_value": 1.5379056486370617e-15
+    },
+    "profit_kruskal": {
+        "H_stat": 101.29513021590793,
+        "p_value": 1.0093503821346756e-22
+    },
+    "seasonal_summary": [
+        {
+            "Season": "Kharif",
+            "Count": 1779,
+            "Avg_Yield_t_ha": 5.63,
+            "Median_Yield_t_ha": 1.95,
+            "Avg_Rainfall_mm": 852.1,
+            "Avg_Water_Efficiency": 5.9,
+            "Avg_Total_Cost_INR": 531804.41,
+            "Avg_Revenue_INR": 711142.71,
+            "Avg_Net_Profit_INR": 179338.31,
+            "Avg_Profit_Per_Ha": 21972.52,
+            "Avg_Pest_Risk_pct": 54.47
+        },
+        {
+            "Season": "Rabi",
+            "Count": 1627,
+            "Avg_Yield_t_ha": 5.09,
+            "Median_Yield_t_ha": 1.66,
+            "Avg_Rainfall_mm": 435.95,
+            "Avg_Water_Efficiency": 5.19,
+            "Avg_Total_Cost_INR": 513836.58,
+            "Avg_Revenue_INR": 601910.88,
+            "Avg_Net_Profit_INR": 88074.3,
+            "Avg_Profit_Per_Ha": 10428.53,
+            "Avg_Pest_Risk_pct": 40.48
+        },
+        {
+            "Season": "Zaid",
+            "Count": 594,
+            "Avg_Yield_t_ha": 4.64,
+            "Median_Yield_t_ha": 1.45,
+            "Avg_Rainfall_mm": 299.16,
+            "Avg_Water_Efficiency": 4.42,
+            "Avg_Total_Cost_INR": 543976.73,
+            "Avg_Revenue_INR": 519524.24,
+            "Avg_Net_Profit_INR": -24452.49,
+            "Avg_Profit_Per_Ha": -2519.44,
+            "Avg_Pest_Risk_pct": 38.22
+        }
+    ],
+    "irrigation_summary": [
+        {
+            "Irrigation_Method": "Drip",
+            "Count": 915,
+            "Avg_Water_Efficiency": 6.26,
+            "Median_Water_Efficiency": 3.26,
+            "Avg_Net_Profit_INR": 218659.05,
+            "Avg_Profit_Per_Ha": 25544.03,
+            "Avg_Cost_Per_Ha": 66456.37
+        },
+        {
+            "Irrigation_Method": "Flood",
+            "Count": 1310,
+            "Avg_Water_Efficiency": 3.44,
+            "Median_Water_Efficiency": 1.95,
+            "Avg_Net_Profit_INR": 73952.08,
+            "Avg_Profit_Per_Ha": 9004.84,
+            "Avg_Cost_Per_Ha": 68421.91
+        },
+        {
+            "Irrigation_Method": "Rainfed",
+            "Count": 1041,
+            "Avg_Water_Efficiency": 7.57,
+            "Median_Water_Efficiency": 4.59,
+            "Avg_Net_Profit_INR": 79261.12,
+            "Avg_Profit_Per_Ha": 9537.22,
+            "Avg_Cost_Per_Ha": 64213.76
+        },
+        {
+            "Irrigation_Method": "Sprinkler",
+            "Count": 734,
+            "Avg_Water_Efficiency": 4.68,
+            "Median_Water_Efficiency": 2.67,
+            "Avg_Net_Profit_INR": 93125.16,
+            "Avg_Profit_Per_Ha": 12891.56,
+            "Avg_Cost_Per_Ha": 67239.14
+        }
+    ]
+}
