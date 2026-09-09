@@ -1,9 +1,5 @@
 """
-Automated PowerPoint Presentation Deck Generator
-VOIS AICTE Internship (Batch 1 2026-2027) Major Project
-Title: Seasonal Agriculture Performance Analysis
-
-Populates the official VOIS template (docs/template.pptx) directly.
+Populate the official VOIS template (docs/template.pptx) directly.
 Preserves all original template masters, logos, headers, styling, and geometry.
 Saves to docs/VOIS_Major_Project_Final_Submission.pptx.
 """
@@ -251,6 +247,8 @@ def populate_template():
 
     for s_idx, title_text, img_file, takeaways in results_content:
         slide = prs.slides[s_idx]
+        # Remove placeholder shapes or text
+        shapes_to_remove = []
         for s in slide.shapes:
             if s.has_text_frame:
                 txt = s.text_frame.text
