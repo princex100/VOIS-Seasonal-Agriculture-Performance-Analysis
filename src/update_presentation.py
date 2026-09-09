@@ -539,52 +539,74 @@ def create_presentation():
     add_footer(slide11, 11)
 
     # =========================================================================
-    # SLIDE 12: GitHub Repository Link
+    # SLIDE 12: GitHub Repository & Google Colab Links
     # =========================================================================
     slide12 = prs.slides.add_slide(blank_layout)
     set_slide_background(slide12, COLOR_LIGHT_BG)
-    add_header(slide12, "Project Repository & Code Deliverables")
+    add_header(slide12, "Project Repository & Google Colab Interactive Links")
 
-    # Link Card
-    c_link = add_card(slide12, Inches(0.8), Inches(1.5), Inches(11.733), Inches(1.6), bg_color=COLOR_DARK, border_color=COLOR_RED)
-    tf_l = c_link.text_frame
-    tf_l.word_wrap = True
-    p_l0 = tf_l.paragraphs[0]
-    p_l0.text = "OFFICIAL GITHUB REPOSITORY LINK"
-    p_l0.font.size = Pt(11)
-    p_l0.font.bold = True
-    p_l0.font.color.rgb = COLOR_RED
+    # Card 1: GitHub Repository Link Card (Left)
+    c_gh = add_card(slide12, Inches(0.8), Inches(1.4), Inches(5.75), Inches(2.2), bg_color=COLOR_DARK, border_color=COLOR_RED)
+    tf_gh = c_gh.text_frame
+    tf_gh.word_wrap = True
+    p_gh0 = tf_gh.paragraphs[0]
+    p_gh0.text = "🐙 OFFICIAL GITHUB REPOSITORY"
+    p_gh0.font.size = Pt(11)
+    p_gh0.font.bold = True
+    p_gh0.font.color.rgb = COLOR_RED
 
-    p_l1 = tf_l.add_paragraph()
-    p_l1.text = "https://github.com/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis"
-    p_l1.font.size = Pt(18)
-    p_l1.font.bold = True
-    p_l1.font.color.rgb = COLOR_WHITE
-    p_l1.space_before = Pt(6)
+    p_gh1 = tf_gh.add_paragraph()
+    p_gh1.text = "https://github.com/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis"
+    p_gh1.font.size = Pt(12)
+    p_gh1.font.bold = True
+    p_gh1.font.color.rgb = COLOR_WHITE
+    p_gh1.space_before = Pt(4)
 
-    p_l2 = tf_l.add_paragraph()
-    p_l2.text = "Replace <YOUR-USERNAME> with your actual GitHub handle upon repository push."
-    p_l2.font.size = Pt(10)
-    p_l2.font.color.rgb = RGBColor(180, 185, 190)
-    p_l2.space_before = Pt(4)
+    p_gh2 = tf_gh.add_paragraph()
+    p_gh2.text = "• Complete production codebase, datasets, and presentation deck.\n• Full Git commit history & structured directory hierarchy."
+    p_gh2.font.size = Pt(10)
+    p_gh2.font.color.rgb = RGBColor(200, 205, 210)
+    p_gh2.space_before = Pt(4)
 
-    # Repository Structure Card
-    c_tree = add_card(slide12, Inches(0.8), Inches(3.3), Inches(11.733), Inches(3.4))
+    # Card 2: Google Colab 1-Click Notebook Link Card (Right)
+    c_colab = add_card(slide12, Inches(6.78), Inches(1.4), Inches(5.75), Inches(2.2), bg_color=COLOR_DARK, border_color=COLOR_GOLD)
+    tf_colab = c_colab.text_frame
+    tf_colab.word_wrap = True
+    p_cl0 = tf_colab.paragraphs[0]
+    p_cl0.text = "⚡ GOOGLE COLAB INTERACTIVE NOTEBOOK"
+    p_cl0.font.size = Pt(11)
+    p_cl0.font.bold = True
+    p_cl0.font.color.rgb = COLOR_GOLD
+
+    p_cl1 = tf_colab.add_paragraph()
+    p_cl1.text = "https://colab.research.google.com/github/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis/blob/main/notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb"
+    p_cl1.font.size = Pt(10.5)
+    p_cl1.font.bold = True
+    p_cl1.font.color.rgb = COLOR_WHITE
+    p_cl1.space_before = Pt(4)
+
+    p_cl2 = tf_colab.add_paragraph()
+    p_cl2.text = "• 1-Click Cloud Execution: Run end-to-end EDA and statistical ANOVA directly in your browser.\n• Zero setup required: Auto-fetches dataset and renders interactive charts."
+    p_cl2.font.size = Pt(10)
+    p_cl2.font.color.rgb = RGBColor(200, 205, 210)
+    p_cl2.space_before = Pt(4)
+
+    # Repository Structure Card (Bottom)
+    c_tree = add_card(slide12, Inches(0.8), Inches(3.8), Inches(11.733), Inches(3.0))
     tf_t = c_tree.text_frame
     tf_t.word_wrap = True
     p_t0 = tf_t.paragraphs[0]
-    p_t0.text = "📁 Structured Repository Tree Index"
+    p_t0.text = "📁 Structured Deliverables & Reproduction Directory Index"
     p_t0.font.size = Pt(13)
     p_t0.font.bold = True
     p_t0.font.color.rgb = COLOR_DARK
 
     tree_items = [
-        ("data/", "Contains raw CSV (4,000 records) and cleaned dataset with imputed medians."),
-        ("notebooks/", "Seasonal_Agriculture_Performance_Analysis.ipynb - Documented research notebook with ANOVA & visualizations."),
+        ("data/", "Contains raw CSV (4,000 records) and cleaned dataset with stratified median imputation."),
+        ("notebooks/", "Seasonal_Agriculture_Performance_Analysis.ipynb - Google Colab compatible research notebook."),
         ("src/", "analyze_and_visualize.py (Data & EDA pipeline), update_presentation.py (Deck builder)."),
         ("results/", "5 High-resolution publication charts (.png) and statistical_summary.json metrics."),
-        ("docs/", "VOIS_Major_Project_Final_Submission.pptx - 14-slide executive submission presentation."),
-        ("README.md", "Production-grade project documentation with reproduction instructions.")
+        ("docs/", "VOIS_Major_Project_Final_Submission.pptx - 14-slide executive submission presentation.")
     ]
     for folder, desc in tree_items:
         p = tf_t.add_paragraph()

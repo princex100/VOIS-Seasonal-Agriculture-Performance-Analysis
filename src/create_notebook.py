@@ -34,6 +34,9 @@ def generate_notebook():
     cells.append(nbf.v4.new_markdown_cell("""# VOIS AICTE Internship Major Project
 # Seasonal Agriculture Performance Analysis (Batch 1: 2026-2027)
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis/blob/main/notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis)
+
 ---
 
 ## 1. Executive Summary & Problem Formulation
@@ -63,6 +66,23 @@ Traditional agricultural decision-making in India relies heavily on historic int
 In this section, we ingest the dataset, inspect missing data mechanisms, apply group-median imputations stratified by `Season` and `Crop`, and ensure mathematical integrity across financial and production columns.
 """))
 
+    cells.append(nbf.v4.new_code_cell("""# Google Colab Environment Setup & Auto-Fetch
+import os
+import sys
+
+# Auto-configure dataset path when running in Google Colab
+if 'google.colab' in sys.modules:
+    print("⚡ Running in Google Colab environment.")
+    # Clone repository or download dataset if not present
+    if not os.path.exists('data/seasonal_agriculture_performance_dataset (1).csv') and not os.path.exists('../data/seasonal_agriculture_performance_dataset (1).csv'):
+        print("Cloning repository from GitHub...")
+        !git clone https://github.com/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis.git repo_temp 2>/dev/null || true
+        if os.path.exists('repo_temp/data'):
+            !cp -r repo_temp/data ./
+            !cp -r repo_temp/results ./
+            print("Dataset successfully imported from repository.")
+"""))
+
     cells.append(nbf.v4.new_code_cell("""# Environment & Library Imports
 import os
 import json
@@ -81,12 +101,15 @@ plt.rcParams['grid.color'] = '#EAEAEA'
 plt.rcParams['grid.linestyle'] = '--'
 
 # Load Raw Dataset
-DATA_PATH = '../data/seasonal_agriculture_performance_dataset (1).csv'
-if not os.path.exists(DATA_PATH):
-    DATA_PATH = 'data/seasonal_agriculture_performance_dataset (1).csv'
+DATA_PATHS = [
+    '../data/seasonal_agriculture_performance_dataset (1).csv',
+    'data/seasonal_agriculture_performance_dataset (1).csv',
+    'seasonal_agriculture_performance_dataset (1).csv'
+]
+DATA_PATH = next((p for p in DATA_PATHS if os.path.exists(p)), DATA_PATHS[0])
 
 df_raw = pd.read_csv(DATA_PATH)
-print(f"Dataset Loaded Successfully: {df_raw.shape[0]} records, {df_raw.shape[1]} features.")
+print(f"Dataset Loaded Successfully from {DATA_PATH}: {df_raw.shape[0]} records, {df_raw.shape[1]} features.")
 df_raw.head()
 """))
 

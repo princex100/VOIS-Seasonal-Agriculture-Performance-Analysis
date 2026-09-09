@@ -2,9 +2,17 @@
 ### VOIS AICTE Internship (Batch 1: 2026-2027) — Major Project
 
 ![VOIS Badge](https://img.shields.io/badge/VOIS-AICTE%20Internship-E60000?style=for-the-badge&logo=vodafone&logoColor=white)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis/blob/main/notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb)
 ![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+
+---
+
+## ⚡ 1-Click Interactive Execution on Google Colab
+
+Run this entire project directly in your browser without local installation:
+👉 **[Open In Google Colab](https://colab.research.google.com/github/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis/blob/main/notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb)**
 
 ---
 
