@@ -556,7 +556,7 @@ def create_presentation():
     p_gh0.font.color.rgb = COLOR_RED
 
     p_gh1 = tf_gh.add_paragraph()
-    p_gh1.text = "https://github.com/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis"
+    p_gh1.text = "https://github.com/princex100/VOIS-Seasonal-Agriculture-Performance-Analysis"
     p_gh1.font.size = Pt(12)
     p_gh1.font.bold = True
     p_gh1.font.color.rgb = COLOR_WHITE
@@ -579,7 +579,7 @@ def create_presentation():
     p_cl0.font.color.rgb = COLOR_GOLD
 
     p_cl1 = tf_colab.add_paragraph()
-    p_cl1.text = "https://colab.research.google.com/github/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis/blob/main/notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb"
+    p_cl1.text = "https://colab.research.google.com/github/princex100/VOIS-Seasonal-Agriculture-Performance-Analysis/blob/main/notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb"
     p_cl1.font.size = Pt(10.5)
     p_cl1.font.bold = True
     p_cl1.font.color.rgb = COLOR_WHITE

@@ -34,8 +34,8 @@ def generate_notebook():
     cells.append(nbf.v4.new_markdown_cell("""# VOIS AICTE Internship Major Project
 # Seasonal Agriculture Performance Analysis (Batch 1: 2026-2027)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis/blob/main/notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/princex100/VOIS-Seasonal-Agriculture-Performance-Analysis/blob/main/notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/princex100/VOIS-Seasonal-Agriculture-Performance-Analysis)
 
 ---
 
@@ -76,7 +76,7 @@ if 'google.colab' in sys.modules:
     # Clone repository or download dataset if not present
     if not os.path.exists('data/seasonal_agriculture_performance_dataset (1).csv') and not os.path.exists('../data/seasonal_agriculture_performance_dataset (1).csv'):
         print("Cloning repository from GitHub...")
-        !git clone https://github.com/<YOUR-USERNAME>/VOIS-Seasonal-Agriculture-Performance-Analysis.git repo_temp 2>/dev/null || true
+        !git clone https://github.com/princex100/VOIS-Seasonal-Agriculture-Performance-Analysis.git repo_temp 2>/dev/null || true
         if os.path.exists('repo_temp/data'):
             !cp -r repo_temp/data ./
             !cp -r repo_temp/results ./
