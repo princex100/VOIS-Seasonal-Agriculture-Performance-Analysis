@@ -12,17 +12,20 @@ Performs:
 
 import os
 import json
+import warnings
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 
+warnings.filterwarnings('ignore')
+
 # ---------------------------------------------------------
 # Global Styling Configuration
 # ---------------------------------------------------------
 plt.rcParams['font.family'] = 'sans-serif'
-plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Arial', 'Helvetica']
+plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Liberation Sans', 'Arial', 'sans-serif']
 plt.rcParams['axes.edgecolor'] = '#CCCCCC'
 plt.rcParams['axes.linewidth'] = 1.0
 plt.rcParams['grid.color'] = '#EAEAEA'

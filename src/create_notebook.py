@@ -85,15 +85,18 @@ if 'google.colab' in sys.modules:
 
     cells.append(nbf.v4.new_code_cell("""# Environment & Library Imports
 import os
+import sys
 import json
+import warnings
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 
-# Plotting Configuration
-plt.rcParams['font.sans-serif'] = 'Arial'
+# Suppress harmless warnings & Configure Universal Cross-Platform Fonts
+warnings.filterwarnings('ignore')
+plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Liberation Sans', 'Arial', 'sans-serif']
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['axes.edgecolor'] = '#CCCCCC'
 plt.rcParams['axes.linewidth'] = 1.0
